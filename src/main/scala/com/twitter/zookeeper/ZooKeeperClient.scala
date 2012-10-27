@@ -41,7 +41,6 @@ class ZooKeeperClient(servers: String, sessionTimeout: Int, connectTimeout: Int,
     val assignLatch = new CountDownLatch(1)
     if (zk != null) {
       zk.close()
-      zk = null
     }
     zk = new ZooKeeper(servers, sessionTimeout,
                        new Watcher { def process(event : WatchedEvent) {
