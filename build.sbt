@@ -4,7 +4,7 @@ version := "2.0.0_fs-b"
 
 organization := "com.twitter"
 
-scalaVersion := "2.9.2"
+scalaVersion := "2.10.0"
 
 resolvers ++= Seq(
   "repo1" at "http://repo1.maven.org/maven2/",
