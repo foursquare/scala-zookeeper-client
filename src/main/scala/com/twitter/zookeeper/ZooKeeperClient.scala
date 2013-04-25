@@ -52,7 +52,7 @@ class ZooKeeperClient(servers: String, sessionTimeout: Int, connectTimeout: Int,
     try {
       isAlive
     } catch {
-      case e => {
+      case e : Exception => {
         throw new RuntimeException("Could not connect to zookeeper ensemble: " + servers 
           + ". Connection timed out after " + connectTimeout + " milliseconds!", e)
       }
